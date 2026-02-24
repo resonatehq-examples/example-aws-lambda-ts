@@ -1,0 +1,19 @@
+{
+  "name": "example-aws-lambda-ts",
+  "version": "1.0.0",
+  "description": "AWS Lambda + Resonate: durable document processing beyond Lambda's 15-minute timeout",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "bundle": "esbuild src/handler.ts --bundle --platform=node --target=node20 --outfile=dist/handler.js --external:@resonatehq/sdk"
+  },
+  "dependencies": {
+    "@resonatehq/sdk": "^0.9.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.3"
+  }
+}
