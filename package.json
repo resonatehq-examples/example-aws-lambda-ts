@@ -9,9 +9,10 @@
     "bundle": "esbuild src/handler.ts --bundle --platform=node --target=node20 --outfile=dist/handler.js --external:@resonatehq/sdk"
   },
   "dependencies": {
-    "@resonatehq/sdk": "^0.9.6"
+    "@resonatehq/sdk": "^0.10.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^22.13.0",
     "esbuild": "^0.24.0",
     "typescript": "^5.7.3"
