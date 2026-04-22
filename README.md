@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner.png" alt="AWS Lambda — Resonate example" />
+</p>
+
 # AWS Lambda + Resonate
 
 Durable document processing beyond Lambda's 15-minute timeout — powered by Resonate.
