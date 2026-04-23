@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.png">
+    <img alt="AWS Lambda — Resonate example" src="./assets/banner-dark.png">
+  </picture>
+</p>
+
 # AWS Lambda + Resonate
 
 Durable document processing beyond Lambda's 15-minute timeout — powered by Resonate.
