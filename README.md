@@ -60,9 +60,7 @@ export async function handler(event) {
 }
 ```
 
-**Compare to Restate on Lambda:** Restate makes Lambda the **executor** — your Lambda IS the step handler. Restate Cloud calls back into your Lambda functions to run each step. This requires a CDK stack, IAM roles, Restate Cloud environment, and the `@restatedev/restate-sdk/lambda` adapter.
-
-**With Resonate:** Lambda is a stateless trigger. It calls `resonate.run()` — same as calling any async function. The Resonate worker handles execution. No CDK, no IAM roles, no service registration.
+**The role split:** Lambda is a stateless trigger. Its only job is to accept the request and call `resonate.run()` — same shape as invoking any async function, returning 202 immediately. The durable workflow runs on a separate long-running Node.js process (the Resonate worker), which has no 15-minute ceiling. No CDK stack to coordinate Lambda-as-executor, no IAM glue between your Lambda and the workflow steps, no service registration per step — Lambda triggers, the worker runs.
 
 ## Files
 
